@@ -1,8 +1,11 @@
 import express from "express";
+import cors from "cors";
 
 import holidays from "./holidays.js";
 
 const app = express();
+
+app.use(cors());
 
 function getTodayDate() {
   return new Date().toLocaleDateString();
